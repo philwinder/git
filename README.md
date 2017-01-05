@@ -1,0 +1,1 @@
+This is to be the location of the workshop materials. Attendees will clone and work within this repository.
