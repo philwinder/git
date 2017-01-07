@@ -2,13 +2,15 @@
 
 **Answers to the goals are hidden as HTML comments.**
 
-Command cheat sheet:
+Cheat sheet:
 
 - `git status`
 - `git add`
 - `git mv`
 - `git rm`
 - `git log`
+
+Setup:
 
 ```
 cd ~/training

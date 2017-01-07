@@ -4,6 +4,12 @@
 
 Cheat sheet:
 
+- `git reset`
+- `.gitignore`
+- `git clean`
+
+Setup:
+
 ```
 cd ~/training
 git clone https://gitlab.com/windtrain/git.git

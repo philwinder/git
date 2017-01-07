@@ -2,7 +2,7 @@
 
 **Answers to the goals are hidden as HTML comments.**
 
-Command cheat sheet:
+Cheat sheet:
 
 - `git init`
 - `git clone`
