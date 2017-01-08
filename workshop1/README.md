@@ -8,9 +8,11 @@
 
 **Fedora/RedHat/Centos based Linux**: `yum install git`
 
-**Alpine linux**: `apk --update add git`
+**Alpine linux**: `apk --update add git git-perl less`
 
 You'll also need `git-perl` for some perl-based git commands like `git add -i`
+
+And less for colour outputs in the logs.
 
 **Windows**: `https://git-for-windows.github.io/`
 
