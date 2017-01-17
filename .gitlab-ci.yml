@@ -2,9 +2,8 @@ image: alpine:3.4
 before_script:
   - apk update && apk add openssl git
   - git submodule update --init --recursive --force
-  - wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz
-  - echo "37ee91ab3469afbf7602a091d466dfa5  hugo_0.16_linux-64bit.tgz" | md5sum -c
-  - tar xf hugo_0.16_linux-64bit.tgz && cp ./hugo /usr/bin
+  - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
+  - tar xf hugo_0.18.1_Linux-64bit.tar.gz && cp ./hugo /usr/bin
   - hugo version
   - echo $(pwd)
   - ls -la .
