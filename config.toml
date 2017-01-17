@@ -1,0 +1,79 @@
+baseurl       = "https://windtrain.gitlab.io/git/"
+languageCode = "en-gb"
+title = "Git Training"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = "UA-68439995-3"
+
+[params]
+	# General information
+	author = "DrPhilWinder"
+	description = "Winder Research Git Training"
+	copyright = "All rights reserved"
+
+	version = "1.0.0"
+	logo = "images/logo.png"
+	favicon = ""
+
+	permalink = "#"
+
+	# Custom assets
+	custom_css = []
+	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
+
+	[params.palette]
+    	primary = "red"
+    	accent  = "teal"
+
+    [params.font]
+    	text = "Ubuntu"
+    	code = "Ubuntu Mono"
+
+
+[social]
+	twitter = "DrPhilWinder"
+	github  = "philwinder"
+	email   = "phil@winderresearch.com"
+
+
+[[menu.main]]
+	name   = "Workshop 1"
+	url    = "/workshop1"
+	weight = 0
+
+[[menu.main]]
+	name   = "Workshop 2"
+	url    = "/workshop2"
+	weight = 10
+
+[[menu.main]]
+	name   = "Workshop 3"
+	url    = "/workshop3"
+	weight = 20
+
+[[menu.main]]
+	name   = "Workshop 4"
+	url    = "/workshop4"
+	weight = 30
+
+[[menu.main]]
+	name   = "Workshop 5"
+	url    = "/workshop5"
+	weight = 40
+
+[[menu.main]]
+	name   = "Workshop 6"
+	url    = "/workshop6"
+	weight = 50
+
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true

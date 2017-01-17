@@ -1,4 +1,6 @@
-# Workshop 4 - Making mistakes
+---
+title: Workshop 4 - Making mistakes
+---
 
 **Answers to the goals are hidden as HTML comments.**
 

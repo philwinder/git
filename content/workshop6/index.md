@@ -1,15 +1,17 @@
-# Workshop 6 - Branches, merges, reverting and submodules
-
+---
+title: Workshop 6 - Branches, merges, reverting and submodules
+---
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<a href="#" onclick="$('div').show(); return false;">Click here to show answers</a>
+<a href="#" onclick="$('pre').show(); return false;">Click here to show answers</a>
 
 (Reload this page to hide answers)
 
 Cheat sheet:
 
 - `git branch`
-- `git branch`
+- `git merge`
+- `git rebase`
+- `git submodule`
 
 ## Branches
 
@@ -17,14 +19,10 @@ Cheat sheet:
 
 **Goal**: Create a branch. Show that your branch has been created.
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ git branch mybranch
 $ git branch
-```
-
-</div>
+</pre>
 
 ### Viewing a branch split
 
@@ -37,17 +35,13 @@ $ git branch
 * 6ae0ce5 (origin/master, origin/HEAD) Finished Workshop 5 - Distributed VCS.
 ```
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ git checkout master ; git branch mybranch
 $ touch masterfile ; git add . ; git commit -m "master commit"
 $ git checkout mybranch
 $ touch branchfile ; git add . ; git commit -m "mybranch file"
 $ git log --all --decorate --oneline --graph
-```
-
-</div>
+</pre>
 
 ## Merging
 
@@ -64,15 +58,11 @@ $ git log --all --decorate --oneline --graph
 * 6ae0ce5 (origin/master, origin/HEAD) Finished Workshop 5 - Distributed VCS.
 ```
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ git checkout master
 $ git merge mybranch
 $ git log --all --decorate --oneline --graph
-```
-
-</div>
+</pre>
 
 ### Fixing a merge conflict
 
@@ -93,7 +83,6 @@ You can always abort a merge to start again! ;-)
 
 A diff might help you see the differences between branches
 
-<div style="display: none;">
 
 For example. Don't worry about using the same method to write the files.
 
@@ -109,7 +98,7 @@ To diff:
 $ git diff
 ```
 
-```
+<pre style="display: none;">
 $ git branch bob ; git branch dave
 $ git checkout dave
 $ sed -i "1s/.*/# New Title/" README.md ; git add . ; git commit -m "new title"
@@ -122,17 +111,14 @@ $ ## Fix merge conflicts
 $ git add .
 $ git commit
 $ git log --all --decorate --oneline --graph
-```
 
-</div>
+</pre>
 
 ## Altering the previous commit
 
 **Goal**: Add a commit, then fix it by altering the last commit.
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ echo "I can has cheezburger" > newfile ; git add . ; git commit -m "cheez"
 $ git diff HEAD~
 $ git log -2 --oneline
@@ -140,9 +126,7 @@ $ echo "Could I have a cheeseburger?" > newfile ; git add .
 $ git commit --amend
 $ git diff HEAD~
 $ git log -2 --oneline
-```
-
-</div>
+</pre>
 
 ## Rebasing commits
 
@@ -164,9 +148,7 @@ And end up looking like:
 * 8a7183e (master) newfile on master
 ```
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ git branch mybranch
 $ touch newfile ; git add .
 $ git commit -m "newfile on master"
@@ -176,22 +158,16 @@ $ git add . ; git commit -m "hi hi"
 $ git log --all --decorate --oneline --graph
 $ git rebase master
 $ git log --all --decorate --oneline --graph
-```
-
-</div>
+</pre>
 
 
 ## Relative links
 
 **Goal**: Write a command that is able to alter the commit messages of the last two commits.
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ git rebase -i HEAD~~
-```
-
-</div>
+</pre>
 
 ## Submodules
 
@@ -206,9 +182,7 @@ $ cat .gitmodules
     url = /shared
 ```
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ mkdir /shared ; cd /shared ; git init ; touch shared_file ;\
     git add . ; git commit -m "Shared file"
 $ mkdir /myapp ; cd /myapp ; git init ; echo "My app" > README.md ;\
@@ -217,9 +191,7 @@ $ git submodule add /shared shared_module  ## More likely to be a url
 $ ls shared_module/
 $ git commit -m "Added shared module"
 $ cat .gitmodules
-```
-
-</div>
+</pre>
 
 ### Initialising
 
@@ -228,14 +200,10 @@ Imagine that another developer wants to clone your repo.
 **Goal**: Clone your repo and pull down the submodules.
 
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ git clone /myapp /daves-app ; cd /daves-app
 $ git submodule update --init --recursive
-```
-
-</div>
+</pre>
 
 ### Updates from the remote
 
@@ -243,9 +211,7 @@ Imagine that someone has updated the shared library.
 
 **Goal**: Pull all updates from the shared repo and commit the changes.
 
-<div style="display: none;">
-
-```
+<pre style="display: none;">
 $ cd /shared ; touch fire ; git add . ; git commit -m "Add fire"
 $ cd /my-other-app/shared_module
 $ git fetch
@@ -254,6 +220,4 @@ $ git pull
 $ cd .. ; git status -s
 $ git commit -a -m "Updated module"
 $ git log --decorate --graph --oneline -U0 --submodule | grep -E '^[*| /\\]+([0-9a-f]{7} |Submodule |> |$)'
-```
-
-</div>
+</pre>

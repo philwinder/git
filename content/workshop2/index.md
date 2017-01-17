@@ -1,4 +1,6 @@
-# Workshop 2 - Creating and cloning repositories
+---
+title: Workshop 2 - Creating and cloning repositories
+---
 
 **Answers to the goals are hidden as HTML comments.**
 

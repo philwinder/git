@@ -1,4 +1,6 @@
-# Workshop 1
+---
+title: Workshop 1 - Installation
+---
 
 ## Install git
 

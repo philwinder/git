@@ -1,4 +1,6 @@
-# Workshop 5 - Distributed version control
+---
+title: Workshop 5 - Distributed version control
+---
 
 **Answers to the goals are hidden as HTML comments.**
 

@@ -1,4 +1,6 @@
-# Workshop 3 - Working with the repository
+---
+title: Workshop 3 - Working with the repository
+---
 
 **Answers to the goals are hidden as HTML comments.**
 
