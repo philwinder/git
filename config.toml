@@ -1,7 +1,7 @@
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
-baseurl       = "https://windtrain.gitlab.io/git/"
+baseurl       = "http://windtrain.gitlab.io/git/"
 languageCode = "en-gb"
 title = "Git Training"
 theme = "hugo-material-docs"
