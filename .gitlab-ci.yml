@@ -1,20 +1,9 @@
-image: alpine:3.4
-before_script:
-  - apk update && apk add openssl git
-  - git submodule update --init --recursive --force
-  - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
-  - tar xf hugo_0.18.1_Linux-64bit.tar.gz && mv hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 hugo && cp ./hugo /usr/bin
-  - hugo version
-  - echo $(pwd)
-  - ls -la .
-test:
-  script:
-  - hugo -v
-  except:
-  - master
 pages:
+  stage: deploy
   script:
-  - hugo -v
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
   artifacts:
     paths:
     - public
