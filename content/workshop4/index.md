@@ -24,17 +24,13 @@ cd ~/training/git
 
 **Goal**: View the location of the pointer `HEAD`
 
-<!--
-```
+<pre style="display: none;">
 git status -b
-```
 
 OR
 
-```
 cat .git/HEAD
-```
--->
+</pre>
 
 ### Remove from staging
 
@@ -45,19 +41,15 @@ git add *
 
 **Goal**: Remove the file `new1` from staging
 
-<!--
-```
+<pre style="display: none;">
 git reset new1
-```
---->
+</pre>
 
 **Goal**: Remove all files from staging
 
-<!--
-```
+<pre style="display: none;">
 git reset
-```
--->
+</pre>
 
 ### Remove from staging and delete
 
@@ -68,21 +60,17 @@ git add *
 
 **Goal**: Remove all files from staging and delete.
 
-<!--
-```
+<pre style="display: none;">
 git reset --hard
-```
--->
+</pre>
 
 ### Moving the HEAD pointer
 
 **Goal**: Move the HEAD pointer to the commit `c7b1f76`.
 
-<!--
-```
+<pre style="display: none;">
 git reset c7b1f76
-```
--->
+</pre>
 
 ## Ignoreing files
 
@@ -102,11 +90,9 @@ git status -s --untracked-files=all
 ?? rubbish.yml
 ```
 
-<!--
-```
+<pre style="display: none;">
 echo *.xml > .gitignore
-```
--->
+</pre>
 
 ### Ignore named files
 
@@ -127,11 +113,9 @@ git status -s --untracked-files=all
 ?? rubbish.yml
 ```
 
-<!--
-```
+<pre style="display: none;">
 echo logs/ > .gitignore
-```
--->
+</pre>
 
 ## Cleaning the repository
 
@@ -145,28 +129,22 @@ mkdir test ; touch fileA test/fileB fileC
 
 **Goal**: Run a dry run on a clean.
 
-<!--
-```
+<pre style="display: none;">
 git clean -n
-```
--->
+</pre>
 
 ### Perform a clean 1
 
 **Goal**: Perform a clean on files within the current directory.
 
-<!--
-```
+<pre style="display: none;">
 git clean -f
-```
--->
+</pre>
 
 ### Perform a clean 2
 
 **Goal**: Perform a clean on all files in the repo.
 
-<!--
-```
+<pre style="display: none;">
 git clean -fd
-```
--->
+</pre>

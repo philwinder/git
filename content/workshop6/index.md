@@ -1,10 +1,6 @@
 ---
 title: Workshop 6 - Branches, merges, reverting and submodules
 ---
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<a href="#" onclick="$('pre').show(); return false;">Click here to show answers</a>
-
-(Reload this page to hide answers)
 
 Cheat sheet:
 

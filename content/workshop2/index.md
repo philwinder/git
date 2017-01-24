@@ -22,11 +22,9 @@ cd training/temp
 
 Inspect the created repository with: `ls -la .git`
 
-<!--
-```
+<pre style="display: none;">
 git init
-```
--->
+</pre>
 
 ## Clone a repository
 
@@ -36,12 +34,10 @@ It is also possible to setup ssh keys to communicate with a repository.
 
 **Goal**: Clone the repository `https://gitlab.com/windtrain/git.git` into `~/training`.
 
-<!--
-```
+<pre style="display: none;">
 cd ~/training
 git clone https://gitlab.com/windtrain/git.git
-```
--->
+</pre>
 
 ## Clone an existing repository
 
