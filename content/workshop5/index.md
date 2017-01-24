@@ -14,21 +14,14 @@ Setup:
 
 For this workshop, we need a remote repository to play around with.
 
-We will do this on GitLab. This is currently my favourite git hosting provider.
+Below are instructions for Gitlab (my favorite host), but feel free to use another host.
 
-Go to http://gitlab.com and create an account if you don't already have one.
-
-Log into your account.
-
-Next, browse to: https://gitlab.com/windtrain/git
-
-Click on the "Fork" button, next to the "star" button. This will fork the repository into your own namespace. Confirm by clicking your namespace.
-
-The project should now be hosted within your namespace.
-
-Clone your project withe the link shown in the middle.
-
-`git clone https://gitlab.com/<username>/git.git`
+1. Go to http://gitlab.com and create an account if you don't already have one.
+2. Log into your account.
+3. Next, browse to: https://gitlab.com/windtrain/git
+4. Click on the "Fork" button, next to the "star" button. This will fork the repository into your own namespace. Confirm by clicking your namespace.
+5. The project should now be hosted within your namespace.
+6. Clone your project withe the link shown in the middle. `git clone https://gitlab.com/<username>/git.git`
 
 ## Remotes
 
@@ -36,16 +29,12 @@ Clone your project withe the link shown in the middle.
 
 **Goal**: View your remotes
 
-<pre style="display: none;">
-
-git remote -v
+<pre style="display: none;">git remote -v
 </pre>
 
 **Goal**: Add a remote pointing to https://gitlab.com/windtrain/git
 
-<pre style="display: none;">
-
-git remote add training https://gitlab.com/windtrain/git
+<pre style="display: none;">git remote add training https://gitlab.com/windtrain/git
 git remote -v
 </pre>
 
@@ -54,7 +43,6 @@ git remote -v
 **Goal**: Delete a remote
 
 <pre style="display: none;">
-
 git remote rm training
 </pre>
 
@@ -75,7 +63,6 @@ First do a `git status` to see your current state. Note how it says "up-to-date"
 **Goal**: Fetch the new commits from the remote origin. Your `git status` should report "Your branch is behind 'origin/master' by 1 commit"
 
 <pre style="display: none;">
-
 git fetch
 ```
 or more verbosely
@@ -90,7 +77,6 @@ We haven't yet copied the commits into our repository. We could merge the fetch 
 **Goal**: Copy the new commits into your local repository. The status of your repository should show that it is now up to date with origin/master.
 
 <pre style="display: none;">
-
 git pull
 ```
 or more verbosely
@@ -107,7 +93,6 @@ Commit that change.
 **Goal**: Copy the commit to the origin (you may need to enter your new user/pass at this point)
 
 <pre style="display: none;">
-
 git push
 ```
 or more verbosely
@@ -122,7 +107,6 @@ git push origin master
 Then browse to `https://gitlab.com/<username>/git/tags`. Your tag should be visible.
 
 <pre style="display: none;">
-
 git tag v0.0.1 -m "My first tag"
 git push --tags
 </pre>
