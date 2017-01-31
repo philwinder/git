@@ -72,7 +72,9 @@ git reset --hard
 git reset c7b1f76
 </pre>
 
-## Ignoreing files
+(Move your HEAD back to origin/master to continue!)
+
+## Ignoring files
 
 Create the test files:
 
